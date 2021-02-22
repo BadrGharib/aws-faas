@@ -92,6 +92,7 @@ export class Todos extends React.PureComponent<TodosProps, TodosState> {
   async componentDidMount() {
     try {
       const todos = await getTodos(this.props.auth.getIdToken())
+      debugger;
       this.setState({
         todos,
         loadingTodos: false
@@ -160,6 +161,7 @@ export class Todos extends React.PureComponent<TodosProps, TodosState> {
     return (
       <Grid padded>
         {this.state.todos.map((todo, pos) => {
+          debugger;
           return (
             <Grid.Row key={todo.todoId}>
               <Grid.Column width={1} verticalAlign="middle">
